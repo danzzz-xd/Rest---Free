@@ -160,7 +160,7 @@ router.get('/cecan/china', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/china.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -181,7 +181,7 @@ router.get('/cecan/vietnam', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/vietnam.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -202,7 +202,7 @@ router.get('/cecan/thailand', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/thailand.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -223,7 +223,7 @@ router.get('/cecan/indonesia', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/indonesia.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -244,7 +244,7 @@ router.get('/cecan/korea', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/korea.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -265,7 +265,7 @@ router.get('/cecan/japan', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/japan.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -286,7 +286,7 @@ router.get('/cecan/malaysia', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Ramdaniofficial/Asupan/main/cecan/malaysia.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -311,7 +311,7 @@ router.get('/asupan/cecan', async (req, res, next) => {
           var apikey = req.query.apikey
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/randomImage/cecan`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/cecan.json`))
         .then(response => response.json())
         .then(async data => {
         var result = data[Math.floor(Math.random() * data.length)];
@@ -483,7 +483,7 @@ router.get('/download/facebook', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://hardianto.xyz/api/fbdl?url=${url}&apikey=hardianto`))
+       fetch(encodeURI(`https://fb-api-zhirrr.vercel.app/?url=${url}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -584,29 +584,6 @@ router.get('/download/tiktok', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/download/ytplay', async (req, res, next) => {
-          var apikey = req.query.apikey
-       	var url = req.query.query
-       	if(!apikey) return res.json(loghandler.apikey)
-       if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
-        if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://hardianto.xyz/api/download/play?query=${url}&apikey=hardianto`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-             	author: 'Ramdani',
-                 result
-             })
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.apikey)
-}
-})
 router.get('/download/ytmp3', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.url
@@ -628,13 +605,13 @@ router.get('/download/ytmp3', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/download/ytmp4', async (req, res, next) => {
+router.get('/download/ytsearch', async (req, res, next) => {
           var apikey = req.query.apikey
-       	var url = req.query.url
+       	var url = req.query.query
        	if(!apikey) return res.json(loghandler.apikey)
-       if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
+       if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
+       fetch(encodeURI(`https://yutub-api-zaahirr.herokuapp.com/search?q=${url}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -651,13 +628,13 @@ router.get('/download/ytmp4', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/download/ytsearch', async (req, res, next) => {
+router.get('/download/ytmp4', async (req, res, next) => {
           var apikey = req.query.apikey
-       	var url = req.query.query
+       	var url = req.query.url
        	if(!apikey) return res.json(loghandler.apikey)
-       if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
+       if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://yutub-api-zaahirr.herokuapp.com/search?q=${url}`))
+       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/ytv?url=${url}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
