@@ -293,7 +293,7 @@ router.get('/cecan/malaysia', async (req, res, next) => {
         var result = data[Math.floor(Math.random() * data.length)];
         var buff = result.url
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  buff
              })
          })
@@ -616,7 +616,7 @@ router.get('/download/ytsearch', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -639,7 +639,7 @@ router.get('/download/ytmp4', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -663,7 +663,7 @@ router.get('/lk21/search', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -685,7 +685,7 @@ router.get('/lk21/terbaru', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -707,7 +707,7 @@ router.get('/lk21/comingsoon', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -729,7 +729,7 @@ router.get('/lk21/tvseries', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -752,7 +752,7 @@ router.get('/lk21/year', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -775,7 +775,7 @@ router.get('/lk21/country', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -798,7 +798,7 @@ router.get('/lk21/genre', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -823,7 +823,7 @@ router.get('/filmapik/search', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -846,7 +846,7 @@ router.get('/filmapik/kategori', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -869,7 +869,7 @@ router.get('/filmapik/play', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -891,7 +891,7 @@ router.get('/filmapik/terbaru', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -916,7 +916,7 @@ router.get('/news/cnn', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -939,7 +939,7 @@ router.get('/news/cnbc', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -962,7 +962,7 @@ router.get('/news/republika', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -985,7 +985,7 @@ router.get('/news/tempo', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -1008,7 +1008,7 @@ router.get('/news/antara', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -1030,7 +1030,7 @@ router.get('/news/kumparan', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -2840,12 +2840,12 @@ router.get('/other/ghstalk', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
         if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://github-api-zhirrr.vercel.app/api/detailuser?q=${text}`))
+       fetch(encodeURI(`http://hadi-api.herokuapp.com/api/githubstalk?username=${text}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
@@ -2857,18 +2857,18 @@ router.get('/other/ghstalk', async (req, res, next) => {
   res.json(loghandler.apikey)
 }
 })
-router.get('/other/repostalk', async (req, res, next) => {
+router.get('/other/ssweb', async (req, res, next) => {
           var apikey = req.query.apikey
-       	var text = req.query.username
+       	var text = req.query.url
        	if(!apikey) return res.json(loghandler.apikey)
        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://github-api-zhirrr.vercel.app/api/searchrepo?q=${text}`))
+       fetch(encodeURI(`https://hardianto.xyz/api/tools/ssweb?url=${text}&apikey=hardianto`))
         .then(response => response.json())
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Ramdani',
+             	author: 'Ramdani Official',
                  result
              })
          })
